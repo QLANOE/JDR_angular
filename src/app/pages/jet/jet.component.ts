@@ -3,7 +3,7 @@ import { Jet } from "../../common/model/jet.model";
 
 @Component({
     selector: 'jet',
-    templateUrl: './jet.component.html'
+    templateUrl: './jet.component.html',
   })
 export class JetHomeComponent {
 
