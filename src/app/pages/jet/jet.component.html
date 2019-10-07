@@ -1,0 +1,19 @@
+<header></header>
+<h2>Jet de dé</h2>
+
+<span>Ici, choississez le jet de dé que vous souhaitez faire</span>
+<br/>
+<span>Quel dé souhaitez vous lancer?</span>
+<br>
+<div >
+<button type="button" (click)="jetD4()">D4</button>
+<button type="button" (click)="jetD6()">D6</button>
+<button type="button" (click)="jetD8()">D8</button>
+<button type="button" (click)="jetD10()">D10</button>
+<button type="button" (click)="jetD12()">D12</button>
+<button type="button" (click)="jetD20()">D20</button>
+<span><input id="nbDes" type="number"/><p>D</p><input id="nbFace" type="number"/></span>
+
+</div>
+<br>
+<span id="resultatJet">Résultat du jet = {{resultat}}</span>

@@ -6,11 +6,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MonstreHomeComponent } from './monstre/home/monstre-home.component';
 import { JDRCommonModule } from '../common/common.module';
+import { JetHomeComponent } from '../pages/jet/jet.component';
 
  
 const homeRouter: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'monstre-home', component: MonstreHomeComponent },
+  { path: 'jet', component: JetHomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
@@ -19,7 +21,8 @@ const homeRouter: Routes = [
   declarations: [
     HomeComponent,
     HeaderComponent,
-    MonstreHomeComponent
+    MonstreHomeComponent,
+    JetHomeComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +34,7 @@ const homeRouter: Routes = [
     HomeComponent,
     HeaderComponent,
     MonstreHomeComponent,
+    JetHomeComponent,
     JDRCommonModule
   ],
 
