@@ -19,9 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/milligram/dist/milligram.css",
         "styles.css",
-        "../node_modules/font-awesome/less/font-awesome.less"
+        "../node_modules/font-awesome/less/font-awesome.less",
+        "../node_modules/bulma/css/bulma.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

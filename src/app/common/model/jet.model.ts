@@ -13,12 +13,8 @@ export class Jet {
 
   jetNbDes(): number[]{
     let resultatsJet: Array<number>  = [];
-    if (this.nbFace == 1) {
+    for (let i = 0; i < this.nbDes; i++) {
       resultatsJet.push(this.jetUnDe());
-    } else {
-      for (let i = 0; i < this.nbFace; i++) {
-        resultatsJet.push(this.jetUnDe());
-      }
     }
     return resultatsJet;
   }

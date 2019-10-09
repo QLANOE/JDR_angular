@@ -1,6 +1,7 @@
 <header></header>
+<br>
 <h2>Jet de dé</h2>
-
+<br>
 <span>Ici, choississez le jet de dé que vous souhaitez faire</span>
 <br/>
 <span>Quel dé souhaitez vous lancer?</span>
@@ -13,8 +14,8 @@
 <button type="button" (click)="jetD12()">D12</button>
 <button type="button" (click)="jetD20()">D20</button>
 <br>
-<input class="inputDe" id="nbDes" type="number"/>D<input id="nbFace" type="number"/>
+<input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D<input class="inputDe" [(ngModel)]="nbFace"  id="nbFace" type="number" min="2"/><button type="button" (click)="jetCustom()">Lancer</button>
 
 </div>
 <br>
-<span class="inputDe" id="resultatJet">Résultat du jet = {{resultat}}</span>
+<span id="resultatJet">Résultat du jet = {{resultat}}</span>
