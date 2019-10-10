@@ -4,18 +4,4 @@
 <br>
 <span>Ici, choississez le jet de dé que vous souhaitez faire</span>
 <br/>
-<span>Quel dé souhaitez vous lancer?</span>
-<br>
-<div >
-<button type="button" (click)="jetD4()">D4</button>
-<button type="button" (click)="jetD6()">D6</button>
-<button type="button" (click)="jetD8()">D8</button>
-<button type="button" (click)="jetD10()">D10</button>
-<button type="button" (click)="jetD12()">D12</button>
-<button type="button" (click)="jetD20()">D20</button>
-<br>
-<input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D<input class="inputDe" [(ngModel)]="nbFace"  id="nbFace" type="number" min="2"/><button type="button" (click)="jetCustom()">Lancer</button>
-
-</div>
-<br>
-<span id="resultatJet">Résultat du jet = {{resultat}}</span>
+<jet-classic></jet-classic>

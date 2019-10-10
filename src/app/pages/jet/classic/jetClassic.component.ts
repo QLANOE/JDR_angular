@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
-import { Jet } from "../../common/model/jet.model";
+import { Jet } from "../../../common/model/jet.model";
 
 @Component({
-    selector: 'jet',
-    templateUrl: './jet.component.html',
+    selector: 'jet-classic',
+    templateUrl: './jetClassic.component.html',
   })
-export class JetHomeComponent {
+export class JetClassicComponent {
 
   constructor() { }
   

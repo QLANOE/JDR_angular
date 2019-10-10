@@ -1,0 +1,16 @@
+<span>Quel dé souhaitez vous lancer?</span>
+<br>
+<div >
+<button type="button" (click)="jet(4)">D4</button>
+<button type="button" (click)="jet(6)">D6</button>
+<button type="button" (click)="jet(8)">D8</button>
+<button type="button" (click)="jet(10)">D10</button>
+<button type="button" (click)="jet(12)">D12</button>
+<button type="button" (click)="jet(20)">D20</button>
+<button type="button" (click)="jet(100)">D100</button>
+<br>
+<input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D<input class="inputDe" [(ngModel)]="nbFace"  id="nbFace" type="number" min="2"/><button type="button" (click)="jetCustom()">Lancer</button>
+
+</div>
+<br>
+<span id="resultatJet">Résultat du jet = {{resultat}}</span>

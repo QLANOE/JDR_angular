@@ -21,7 +21,7 @@
       "styles": [
         "styles.css",
         "../node_modules/font-awesome/less/font-awesome.less",
-        "../node_modules/bulma/css/bulma.min.css"
+        "../node_modules/bulma/css/bulma.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
