@@ -13,4 +13,15 @@
 
 </div>
 <br>
-<span id="resultatJet">Résultat du jet = {{resultat}}</span>
+<span>Affichage du résultat</span>
+<span><div>
+    <input type="radio" id="Liste" name="affichage" value="Liste" [(ngModel)]="affichage">
+    <label for="Liste">Liste</label>
+  </div>
+  <div>
+    <input type="radio" id="Somme" name="affichage" value="Somme" [(ngModel)]="affichage">
+    <label for="Somme">Somme</label>
+  </div>
+</span>
+<span *ngIf="affichage === 'Liste'" id="resultatJet">Résultat du jet = {{resultat}}</span>
+<span *ngIf="affichage === 'Somme'" id="resultatJet">Résultat du jet = {{somme}}</span>

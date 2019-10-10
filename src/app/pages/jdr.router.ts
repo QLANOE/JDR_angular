@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { MonstreHomeComponent } from './monstre/home/monstre-home.component';
 import { JDRCommonModule } from '../common/common.module';
 import { JetHomeComponent } from '../pages/jet/jet.component';
+import { JetModule } from './jet/jet.module';
 
  
 const homeRouter: Routes = [
@@ -25,6 +26,7 @@ const homeRouter: Routes = [
     JetHomeComponent
   ],
   imports: [
+    JetModule,
     CommonModule,
     RouterModule.forRoot(homeRouter, { useHash: true }),
     JDRCommonModule
@@ -35,7 +37,8 @@ const homeRouter: Routes = [
     HeaderComponent,
     MonstreHomeComponent,
     JetHomeComponent,
-    JDRCommonModule
+    JDRCommonModule,
+    JetModule
   ],
 
 })

@@ -13,6 +13,7 @@ export class JetHomeComponent {
   nbDe: number = 1;
   nbFace: number = 2;
 
+
   jet(nbFace: number) {
     let jet: Jet = new Jet(1, nbFace);
     this.resultat = jet.jetNbDes();
