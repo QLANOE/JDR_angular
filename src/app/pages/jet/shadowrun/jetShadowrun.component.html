@@ -1,0 +1,29 @@
+<span>Quel dé souhaitez vous lancer?</span>
+<br>
+<div >
+<button type="button" (click)="jet(6)">D6</button>
+<br><span>Lancer de D6</span><br>
+<input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D6<button type="button" (click)="jetND6()">Lancer</button>
+<br><span>Lancer de dé custom</span><br>
+<input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D<input class="inputDe" [(ngModel)]="nbFace"  id="nbFace" type="number" min="2"/><button type="button" (click)="jetCustom()">Lancer</button>
+
+</div>
+<br>
+<span>Affichage du résultat</span>
+<span><div>
+    <input type="radio" id="Liste" name="affichage" value="Liste" [(ngModel)]="affichage">
+    <label for="Liste">Liste</label>
+  </div>
+  <div>
+    <input type="radio" id="Somme" name="affichage" value="Somme" [(ngModel)]="affichage">
+    <label for="Somme">Somme</label>
+  </div>
+</span>
+<span *ngIf="affichage === 'Liste'" id="resultatJet">Résultat du jet = {{resultat}}</span>
+<span *ngIf="affichage === 'Somme'" id="resultatJet">Résultat du jet = {{somme}}</span>
+
+<div id="analyse">
+    <span>Il y a {{reussite}} réussites</span>
+    <span *ngIf="fail && !botch"><br>Vous avez échouez</span>
+    <span *ngIf="botch"><br>Vous avez échouez lamentablement</span>
+</div>

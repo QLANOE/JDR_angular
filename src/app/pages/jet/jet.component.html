@@ -4,15 +4,18 @@
 <br>
 <span>Choissisez le format de jet de dés que vous souhaitez</span>
 <span><div>
-    <input type="radio" id="classic" name="drone" value="classic"
-           checked>
-    <label for="huey">Classic</label>
-  </div>
-  
-  <div>
-    <input type="radio" id="werewolf" name="drone" value="werewolf">
-    <label for="dewey">Loup-Garou</label>
-  </div>
+  <input type="radio" id="classic" name="jeu" value="classic" [(ngModel)]="jeu">
+  <label for="classic">Classic</label>
+</div>
+<div>
+  <input type="radio" id="shadowrun" name="jeu" value="shadowrun" [(ngModel)]="jeu">
+  <label for="shadowrun">Shadow run</label>
+</div>
+<div>
+  <input type="radio" id="ww" name="jeu" value="ww" [(ngModel)]="jeu">
+  <label for="ww">Loup-garou</label>
+</div>
 </span>
 <br/>
-<jet-classic></jet-classic>
+<div *ngIf="jeu === 'classic'"><jet-classic></jet-classic></div>
+<div *ngIf="jeu === 'shadowrun'"><jet-shadowrun></jet-shadowrun></div>

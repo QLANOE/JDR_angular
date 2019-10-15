@@ -1,14 +1,15 @@
 import { Component } from "@angular/core";
-import { Jet } from "../../../common/model/jet.model";
-import _ from "lodash";
+import { JetService } from "../../../common/services/jet.service";
+//import _ from "lodash";
 
 @Component({
     selector: 'jet-classic',
     templateUrl: './jetClassic.component.html',
+    providers: [JetService]
   })
 export class JetClassicComponent {
 
-  constructor() { }
+  constructor(private jetService: JetService) {}
   
   resultat: number[] = [0];
   nbDe: number = 1;
@@ -17,20 +18,22 @@ export class JetClassicComponent {
   somme: number = 0;
 
   jet(nbFace: number) {
-    let jet: Jet = new Jet(1, nbFace);
-    this.resultat = jet.jetNbDes();
+    this.resultat = this.jetService.jetSimple(nbFace);
     this.somme = this.resultat[0];
   }
 
   jetCustom() {
-    let jet: Jet = new Jet(this.nbDe, this.nbFace)
-    this.resultat = jet.jetNbDes();
+    this.resultat = this.jetService.jetMultiple(this.nbDe, this.nbFace);
     this.sommeResultat();
+    this.resultat = this.jetService.trierJet(this.resultat);
   }
 
   sommeResultat(){
     let sum: number = 0;
-    _.forEach(this.resultat, function(value: number){
+    /*_.forEach(this.resultat, function(value){
+      console.log(value);
+    });*/
+    this.resultat.forEach(value => {
       sum += value;
     })
     this.somme = sum;
