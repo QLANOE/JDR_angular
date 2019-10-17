@@ -1,7 +1,9 @@
 <span>Quel dé souhaitez vous lancer?</span>
 <br>
 <div >
-<input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D6<button type="button" (click)="jetND6()">Lancer</button>
+<span>difficulté: <input class="inputDe" [(ngModel)]="difficulte" id="difficulte" type="number" min="2"/></span>
+<br>
+<input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D10<button type="button" (click)="jetND10()">Lancer</button>
 <br><span>Lancer de dé custom</span><br>
 <input class="inputDe" [(ngModel)]="nbDe" id="nbDes" type="number" min="1"/>D<input class="inputDe" [(ngModel)]="nbFace"  id="nbFace" type="number" min="2"/><button type="button" (click)="jetCustom()">Lancer</button>
 
@@ -22,6 +24,6 @@
 
 <div id="analyse">
     <span>Il y a {{reussite}} réussites</span>
-    <span *ngIf="fail && !botch"><br>Vous avez échouez</span>
+    <span *ngIf="reussite === 0 && !botch"><br>Vous avez échouez</span>
     <span *ngIf="botch"><br>Vous avez échouez lamentablement</span>
 </div>

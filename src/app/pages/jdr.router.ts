@@ -22,6 +22,7 @@ const homeRouter: Routes = [
   declarations: [
     HomeComponent,
     HeaderComponent,
+    JetHomeComponent,
     MonstreHomeComponent
   ],
   imports: [
@@ -35,6 +36,7 @@ const homeRouter: Routes = [
     HomeComponent,
     HeaderComponent,
     MonstreHomeComponent,
+    JetHomeComponent,
     JDRCommonModule,
     JetModule
   ],

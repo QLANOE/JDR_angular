@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JDRCommonModule } from '../../common/common.module';
 import { JetClassicComponent } from './classic/jetClassic.component';
-import { JetHomeComponent } from './jet.component';
 import { JetShadowrunComponent } from './shadowrun/jetShadowrun.component';
+import { JetWerewolfComponent } from './werewolf/jetWw.component';
 
  
 
@@ -12,16 +12,16 @@ import { JetShadowrunComponent } from './shadowrun/jetShadowrun.component';
   declarations: [
     JetClassicComponent,
     JetShadowrunComponent,
-    JetHomeComponent
+    JetWerewolfComponent
   ],
   imports: [
     CommonModule,
-    JDRCommonModule
+    JDRCommonModule,
   ],
   exports: [
     JetClassicComponent,
     JetShadowrunComponent,
-    JetHomeComponent
+    JetWerewolfComponent
   ],
 
 })
