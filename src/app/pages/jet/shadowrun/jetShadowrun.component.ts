@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { JetService } from "../../../common/services/jet.service";
-//import _ from "lodash";
+import { forEach } from "lodash";
 
 @Component({
     selector: 'jet-shadowrun',
@@ -38,9 +38,9 @@ export class JetShadowrunComponent {
 
   sommeResultat(){
     let sum: number = 0;
-    this.resultat.forEach(value => {
+    forEach(this.resultat, function(value){
       sum += value;
-    })
+    });
     this.somme = sum;
   }
 

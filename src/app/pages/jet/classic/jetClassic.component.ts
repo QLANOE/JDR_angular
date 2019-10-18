@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { JetService } from "../../../common/services/jet.service";
-//import _ from "lodash";
+import  { forEach} from "lodash";
 
 @Component({
     selector: 'jet-classic',
@@ -30,12 +30,9 @@ export class JetClassicComponent {
 
   sommeResultat(){
     let sum: number = 0;
-    /*_.forEach(this.resultat, function(value){
-      console.log(value);
-    });*/
-    this.resultat.forEach(value => {
+    forEach(this.resultat, function(value){
       sum += value;
-    })
+    });
     this.somme = sum;
   }
 

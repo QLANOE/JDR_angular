@@ -1,22 +1,42 @@
 <header></header>
-<br>
-<h2>Jet de dé</h2>
-<br>
-<span>Choissisez le format de jet de dés que vous souhaitez</span>
-<span><div>
-  <input type="radio" id="classic" name="jeu" value="classic" [(ngModel)]="jeu">
-  <label for="classic">Classic</label>
+<div class="columns">
+  <div class="column is-offset-1 is-3">
+    <br />
+    <h1 class="title is-2">Jet de dé</h1>
+    <br />
+    <span>Quel type de jet vous souhaitez faire ?</span>
+
+    <div class="control box">
+      <label class="radio">
+        <input
+          type="radio"
+          id="classic"
+          name="jeu"
+          value="classic"
+          [(ngModel)]="jeu"
+        />
+        <label for="classic">Classic</label>
+      </label>
+      <label class="radio">
+        <input
+          type="radio"
+          id="shadowrun"
+          name="jeu"
+          value="shadowrun"
+          [(ngModel)]="jeu"
+        />
+        <label for="shadowrun">Shadow run</label>
+      </label>
+      <label class="radio">
+        <input type="radio" id="ww" name="jeu" value="ww" [(ngModel)]="jeu" />
+        <label for="ww">Loup-garou</label>
+      </label>
+    </div>
+    <br />
+    <div class="box">
+      <div *ngIf="jeu === 'classic'"><jet-classic></jet-classic></div>
+      <div *ngIf="jeu === 'shadowrun'"><jet-shadowrun></jet-shadowrun></div>
+      <div *ngIf="jeu === 'ww'"><jet-ww></jet-ww></div>
+    </div>
+  </div>
 </div>
-<div>
-  <input type="radio" id="shadowrun" name="jeu" value="shadowrun" [(ngModel)]="jeu">
-  <label for="shadowrun">Shadow run</label>
-</div>
-<div>
-  <input type="radio" id="ww" name="jeu" value="ww" [(ngModel)]="jeu">
-  <label for="ww">Loup-garou</label>
-</div>
-</span>
-<br/>
-<div *ngIf="jeu === 'classic'"><jet-classic></jet-classic></div>
-<div *ngIf="jeu === 'shadowrun'"><jet-shadowrun></jet-shadowrun></div>
-<div *ngIf="jeu === 'ww'"><jet-ww></jet-ww></div>
