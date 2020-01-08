@@ -15,6 +15,7 @@ export class JetClassicComponent {
   nbDe: number = 1;
   nbFace: number = 2;
   affichage: string = 'Liste';
+  jetString: string = "1d6";
   somme: number = 0;
 
   jet(nbFace: number) {
@@ -34,6 +35,12 @@ export class JetClassicComponent {
       sum += value;
     });
     this.somme = sum;
+  }
+
+  jetRegex() {
+    this.resultat = this.jetService.jetRegex(this.jetString);
+    this.sommeResultat();
+    this.resultat = this.jetService.trierJet(this.resultat);
   }
 
   }

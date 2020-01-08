@@ -17,4 +17,19 @@ export class JetService {
   trierJet(tableau: number[]): number[]{
     return tableau.sort(function(a, b){return a-b});
   }
+
+  jetRegex(jetString: string): number[]{
+
+    let lireD: RegExp = /(\d+)d(\d+)/;
+    var valeursDe = jetString.match(lireD)
+  
+    if(valeursDe==null){
+      return null;
+    }else{
+      var nbDes = parseInt(valeursDe[1]);
+      var nbFace = parseInt(valeursDe[2]);
+      let jet: number[] = this.jetMultiple(nbDes, nbFace);
+      return jet;
+    }
+  }
 }
